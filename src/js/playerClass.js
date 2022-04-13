@@ -7,6 +7,7 @@ export default class PlayerClass {
     this.experience = 0;
     this.level = 1;
     this.type = {};
+    this.item = {};
   }
   
   xp(xpPoints) {
@@ -35,5 +36,12 @@ export default class PlayerClass {
       this.type = "mage";
     }
   }
-  
+
+  inventory(item) {
+    if (item === "sword") {
+      this.strength += 1;
+    } else {
+      this.intelligence += 1;
+    }
+  }
 }

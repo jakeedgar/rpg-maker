@@ -40,4 +40,13 @@ describe('PlayerClass', () => {
     expect(reusablePlayer.dexterity).toEqual(6);
     expect(reusablePlayer.constitution).toEqual(4);
   });
+
+  test("should increase player stats based on held item", () => {
+    reusablePlayer.vocation("knight");
+    reusablePlayer.inventory("sword");
+    expect(reusablePlayer.strength).toEqual(7);
+    reusablePlayer.vocation("mage");
+    reusablePlayer.inventory("staff");
+    expect(reusablePlayer.intelligence).toEqual(8);
+  })
 });
