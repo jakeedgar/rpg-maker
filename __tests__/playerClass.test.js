@@ -15,6 +15,29 @@ describe('PlayerClass', () => {
   });
 
   test('should return the experience points', () => {
-    expect(reusablePlayer.xp(5)).toEqual(5);
+    reusablePlayer.xp(5)
+    expect(reusablePlayer.experience).toEqual(5);
+  });
+
+  test('should return player level',() =>{
+    reusablePlayer.xp(1);
+    expect(reusablePlayer.level).toEqual(1);
+    reusablePlayer.xp(11);
+    expect(reusablePlayer.level).toEqual(2);
+    reusablePlayer.xp(21);
+    expect(reusablePlayer.level).toEqual(3);
+  });
+
+  test("should update player stats based on player type input", () => {
+    reusablePlayer.vocation("knight");
+    expect(reusablePlayer.strength).toEqual(6);
+    expect(reusablePlayer.intelligence).toEqual(4);
+    expect(reusablePlayer.dexterity).toEqual(7);
+    expect(reusablePlayer.constitution).toEqual(7);
+    reusablePlayer.vocation("mage");
+    expect(reusablePlayer.strength).toEqual(4);
+    expect(reusablePlayer.intelligence).toEqual(7);
+    expect(reusablePlayer.dexterity).toEqual(6);
+    expect(reusablePlayer.constitution).toEqual(4);
   });
 });
