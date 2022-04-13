@@ -8,4 +8,7 @@ export default class PlayerClass {
     this.level = 1;
   }
   
+  xp(xpPoints) {
+    return(this.experience + xpPoints);
+  }
 }
