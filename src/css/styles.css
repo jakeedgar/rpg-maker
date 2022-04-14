@@ -1,3 +1,8 @@
 #playerStats {
   display: none;
 }
+
+#rat, #wolf, #knight {
+  display: none;
+  font-size: 100px;
+}

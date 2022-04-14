@@ -9,24 +9,33 @@ import Battle from './js/battle';
 $(document).ready(function() {
   let playerClass;
   let playerOne;
-  playerClass = $("input:radio[name=player]:checked").val();
   playerOne = new PlayerClass();
   const enemy = new npcClass();
   const game = new Battle(playerOne, enemy)
+
     $("#game").submit(function(event) {
       event.preventDefault();
+      playerClass = $("input:radio[name=player]:checked").val();
       playerOne.vocation(playerClass);
       console.log(playerOne.type);
     $("#game").hide();
     $("#playerStats").show();
-    $("#pClass").text(playerOne.type);
-    $("#pStr").text(playerOne.strength);
-    $("#pInt").text(playerOne.intelligence);
-    $("#pCon").text(playerOne.constitution);
-    $("#pDex").text(playerOne.dexterity);
-
-    $("#rat-gen").on("click",function() {
-      enemy.enemyType("rat");
+    $("#pClass").text("Your Player Class Is: " + playerOne.type);
+    $("#pStr").text("Your Strength Stat Is: " + playerOne.strength);
+    $("#pInt").text("Your Intelligence Stat Is: " + playerOne.intelligence);
+    $("#pCon").text("Your Constitution Stat Is: " + playerOne.constitution);
+    $("#pDex").text("Your Dexterity Stat Is: " + playerOne.dexterity);
     });
+  $("#rat-gen").on("click",function() {
+    $("p#rat").show();
+    enemy.enemyType("rat");
+  });
+  $("#wolf-gen").on("click",function() {
+    $("p#wolf").show();
+    enemy.enemyType("wolf");
+  });
+  $("#knight-gen").on("click",function() {
+    $("p#knight").show();
+    enemy.enemyType("enemyKnight");
   });
 });
