@@ -16,7 +16,7 @@ describe( 'npcClass',()=>{
   });
 
   test("should update player stats based on player type input", () => {
-    npcPlayer.enemyType("enemy");
+    npcPlayer.enemyType("enemyKnight");
     expect(npcPlayer.strength).toEqual(8);
     expect(npcPlayer.intelligence).toEqual(7);
     expect(npcPlayer.dexterity).toEqual(8);

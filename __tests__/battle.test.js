@@ -22,22 +22,32 @@ describe('battle', () => {
     expect(battle.player.intelligence).toEqual(7)
   });
 
-  // test("should decrement opposing players constitution by a random number", () => {
-  //   player.vocation("knight");
-  //   enemy.enemyType("wolf");
-  //   battle.ratBattle();
-  //   expect(battle.player.constitution).toBeGreaterThan(0);
-  //   expect(battle.player.constitution).toBeLessThan(8);
-  // });
-
   test("should toggle player turn from true to false", () => {
     player.vocation("knight");
     enemy.enemyType("wolf");
-    battle.currentBattle();
+    battle.playerBattle();
     expect(battle.player.turn).toEqual(false);
     player.vocation("mage");
     enemy.enemyType("wolf");
-    battle.currentBattle();
+    battle.playerBattle();
     expect(battle.player.turn).toEqual(false);
+  });
+
+  test("should toggle player turn from false to true", () => {
+    player.vocation("knight");
+    enemy.enemyType("rat");
+    battle.playerBattle();
+    battle.enemyBattle();
+    expect(battle.player.turn).toEqual(true);
+    player.vocation("knight");
+    enemy.enemyType("wolf");
+    battle.playerBattle();
+    battle.enemyBattle();
+    expect(battle.player.turn).toEqual(true);
+    player.vocation("knight");
+    enemy.enemyType("enemyKnight");
+    battle.playerBattle();
+    battle.enemyBattle();
+    expect(battle.player.turn).toEqual(true);
   });
 });

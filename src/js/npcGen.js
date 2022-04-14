@@ -8,12 +8,12 @@ export default class npcClass {
     this.turn = false;
   }
   enemyType(npcPlayer) {
-    if (npcPlayer === "enemy") {
+    if (npcPlayer === "enemyKnight") {
       this.strength = 8;
       this.intelligence = 7;
       this.dexterity = 8;
       this.constitution = 7;
-      this.type = "enemy";
+      this.type = "enemyKnight";
     } else if(npcPlayer === "wolf") {
       this.strength = 5;
       this.intelligence = 6;

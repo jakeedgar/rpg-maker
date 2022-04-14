@@ -32,7 +32,7 @@ export default class Battle {
   //   if (this.player )
   //     return this.player.constitution -= this.enemyHit();
   // }
-  currentBattle() {
+  playerBattle() {
     if ((this.player.turn === true) && (this.player.type === "knight")) {
       this.enemy.constitution -= this.knightHit();
       this.player.turn = false;
@@ -40,8 +40,20 @@ export default class Battle {
       this.enemy.constitution -= this.mageHit();
       this.player.turn = false;
     } else {
-      return this.player.constitution;
+      this.player.turn = false;
+    }
+  }
+
+  enemyBattle() {
+    if ((this.player.turn === false) && (this.enemy.type === "rat")) {
+      this.player.constitution -= this.enemyHit();
+      this.player.turn = true;
+    } else if ((this.player.turn === false) && (this.enemy.type === "wolf")) {
+      this.player.constitution -= this.enemyHit();
+      this.player.turn = true;
+    }  else {
+      this.player.constitution -= this.enemyHit();
+      this.player.turn = true;
     }
   }
 }
-
