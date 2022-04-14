@@ -6,5 +6,14 @@ export default class Battle {
     this.player = player;
     this.enemy = enemy;
   }
+
+  // ratBattle(player, enemy) {
+  //   if (player.type === "knight") {
+  //     enemy.constitution--;
+  //   } else if (player.type === "mage") {
+  //     return Battle.enemy.constitution;
+  //   }
+  // }
+  
 }
 
