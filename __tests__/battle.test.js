@@ -35,5 +35,9 @@ describe('battle', () => {
     enemy.enemyType("wolf");
     battle.currentBattle();
     expect(battle.player.turn).toEqual(false);
+    player.vocation("mage");
+    enemy.enemyType("wolf");
+    battle.currentBattle();
+    expect(battle.player.turn).toEqual(false);
   });
 });

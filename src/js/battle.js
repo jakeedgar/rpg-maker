@@ -38,8 +38,9 @@ export default class Battle {
       this.player.turn = false;
     } else if ((this.player.turn === true) && (this.player.type === "mage")) {
       this.enemy.constitution -= this.mageHit();
+      this.player.turn = false;
     } else {
-      this.player.constitution -= this.enemyHit();
+      return this.player.constitution;
     }
   }
 }
