@@ -50,6 +50,8 @@ describe('PlayerClass', () => {
     expect(reusablePlayer.intelligence).toEqual(8);
     reusablePlayer.vocation("knight");
     reusablePlayer.inventory("potion");
+    reusablePlayer.inventory("sword");
+    expect(reusablePlayer.strength).toEqual(7);
     expect(reusablePlayer.constitution).toEqual(12);
   })
 });
