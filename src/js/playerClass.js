@@ -1,3 +1,4 @@
+
 export default class PlayerClass {
   constructor(strength, intelligence, dexterity, constitution) {
     this.strength = strength;
@@ -8,6 +9,7 @@ export default class PlayerClass {
     this.level = 1;
     this.type = {};
     this.item = {};
+    this.turn = true;
   }
   
   xp(xpPoints) {
