@@ -42,8 +42,10 @@ export default class PlayerClass {
   inventory(item) {
     if (item === "sword") {
       this.strength += 1;
-    } else {
+    } else if (item === "staff") {
       this.intelligence += 1;
+    } else {
+      this.constitution += 5;
     }
   }
 }

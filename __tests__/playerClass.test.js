@@ -48,5 +48,8 @@ describe('PlayerClass', () => {
     reusablePlayer.vocation("mage");
     reusablePlayer.inventory("staff");
     expect(reusablePlayer.intelligence).toEqual(8);
+    reusablePlayer.vocation("knight");
+    reusablePlayer.inventory("potion");
+    expect(reusablePlayer.constitution).toEqual(12);
   })
 });
