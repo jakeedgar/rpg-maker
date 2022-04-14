@@ -1,5 +1,5 @@
-// import PlayerClass from './playerClass.js';
-// import npcClass from './npcGen.js';
+import npcClass from "./npcGen";
+import PlayerClass from "./playerClass";
 
 export default class Battle {
   constructor(player, enemy) {
@@ -7,13 +7,12 @@ export default class Battle {
     this.enemy = enemy;
   }
 
-  // ratBattle(player, enemy) {
-  //   if (player.type === "knight") {
-  //     enemy.constitution--;
-  //   } else if (player.type === "mage") {
-  //     return Battle.enemy.constitution;
-  //   }
-  // }
-  
+  ratBattle() {
+    if(this.player.type === "knight") {
+      this.player.constitution -= 1;
+    }else {
+      return this.player.constitution;
+    }
+  }
 }
 
