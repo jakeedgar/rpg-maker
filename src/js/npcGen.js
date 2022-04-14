@@ -5,7 +5,6 @@ export default class npcClass {
     this.dexterity = dexterity;
     this.constitution = constitution;
     this.type = {};
-    this.turn = false;
   }
   enemyType(npcPlayer) {
     if (npcPlayer === "enemyKnight") {
