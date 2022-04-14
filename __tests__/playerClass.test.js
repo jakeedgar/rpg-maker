@@ -5,7 +5,7 @@ describe('PlayerClass', () => {
 
   beforeEach(() => {
     reusablePlayer = new PlayerClass(5, 5, 5, 5);
-  })
+  });
   
   test('should return the stats of the player class', () => {
     expect(reusablePlayer.strength).toEqual(5);
@@ -53,5 +53,5 @@ describe('PlayerClass', () => {
     reusablePlayer.inventory("sword");
     expect(reusablePlayer.strength).toEqual(7);
     expect(reusablePlayer.constitution).toEqual(12);
-  })
+  });
 });

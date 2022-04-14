@@ -5,7 +5,7 @@ describe( 'npcClass',()=>{
   
   beforeEach(()=>{
   npcPlayer = new npcClass(4,6,7,8);
-  })
+  });
 
   test ("Should return the npc stats ",()=>{
 

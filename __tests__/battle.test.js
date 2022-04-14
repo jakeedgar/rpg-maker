@@ -11,7 +11,7 @@ describe('battle', () => {
     enemy = new npcClass();
     player = new PlayerClass();
     battle = new Battle(player, enemy);
-  })
+  });
 
   test('should return the specific stat with player or npc input', () => {
     player.vocation("knight");
