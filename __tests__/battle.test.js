@@ -22,10 +22,18 @@ describe('battle', () => {
     expect(battle.player.intelligence).toEqual(7)
   });
 
-  test("should decrement opposing players constitution by 1", () => {
+  // test("should decrement opposing players constitution by 1", () => {
+  //   player.vocation("knight");
+  //   enemy.enemyType("wolf");
+  //   battle.ratBattle();
+  //   expect(battle.player.constitution).toEqual(6);
+  // });
+
+  test("should decrement opposing players constitution by a random number", () => {
     player.vocation("knight");
     enemy.enemyType("wolf");
     battle.ratBattle();
-    expect(battle.player.constitution).toEqual(6);
+    expect(battle.player.constitution).toBeGreaterThan(0);
+    expect(battle.player.constitution).toBeLessThan(8);
   });
 });
