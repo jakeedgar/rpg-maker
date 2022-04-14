@@ -6,3 +6,7 @@
   display: none;
   font-size: 100px;
 }
+
+#wolf-gen, #knight-gen, #fight {
+  display: none;
+}

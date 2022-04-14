@@ -26,16 +26,19 @@ $(document).ready(function() {
     $("#pCon").text("Your Constitution Stat Is: " + playerOne.constitution);
     $("#pDex").text("Your Dexterity Stat Is: " + playerOne.dexterity);
     });
+
   $("#rat-gen").on("click",function() {
     $("p#rat").show();
     enemy.enemyType("rat");
+    $("#rat-gen").hide();
+    $("#fight").show();
   });
-  $("#wolf-gen").on("click",function() {
-    $("p#wolf").show();
-    enemy.enemyType("wolf");
-  });
-  $("#knight-gen").on("click",function() {
-    $("p#knight").show();
-    enemy.enemyType("enemyKnight");
-  });
+  // $("#wolf-gen").on("click",function() {
+  //   $("p#wolf").show();
+  //   enemy.enemyType("wolf");
+  // });
+  // $("#knight-gen").on("click",function() {
+  //   $("p#knight").show();
+  //   enemy.enemyType("enemyKnight");
+  // });
 });
